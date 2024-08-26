@@ -1,0 +1,164 @@
+/* Fichier styles.css */
+
+/* Appliquer les polices globales */
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif; /* Police secondaire pour le texte */
+    background-image: url('fond-palmiers.jpg'); /* Image de fond de palmiers */
+    background-size: cover; /* Couvrir tout l'arrière-plan */
+    background-attachment: fixed; /* Image fixe en arrière-plan */
+    background-repeat: no-repeat; /* Ne pas répéter l'image */
+    background-position: center; /* Centrer l'image */
+}
+
+/* Style du header */
+.header {
+    width: 100%; /* Pleine largeur */
+    height: 90vh; /* Hauteur égale à la hauteur de la fenêtre */
+    background-color: #1E5B41; /* Couleur vert palmier */
+    color: white; /* Couleur du texte */
+    padding: 50px 0; /* Espacement vertical */
+    text-align: center; /* Centrer le texte */
+    display: flex; /* Utiliser flexbox pour centrer le contenu */
+    flex-direction: column; /* Aligner le contenu verticalement */
+    justify-content: center; /* Centrer le contenu verticalement */
+    align-items: center; /* Centrer le contenu horizontalement */
+    position: relative; /* Pour la flèche */
+}
+
+/* Container du texte dans le header */
+.container {
+    max-width: 800px; /* Largeur maximale du conteneur */
+    margin: 0 auto; /* Centrer horizontalement */
+    padding: 20px; /* Espacement interne */
+    border-radius: 10px; /* Bords arrondis pour un style plus doux */
+}
+
+/* Appliquer la police principale pour les titres */
+h1, h3 {
+    font-family: 'Poppins', sans-serif; /* Police principale pour les titres */
+    margin: 0; /* Enlever la marge par défaut */
+}
+
+/* Appliquer la police secondaire pour les sous-titres */
+h2, p {
+    font-family: 'Roboto', sans-serif; /* Police secondaire pour le sous-titre et texte */
+}
+
+/* Taille de la police pour les différents éléments */
+h1 {
+    font-size: 2.5em; /* Taille de la police pour le titre principal */
+    margin: 0; /* Enlever la marge par défaut */
+}
+
+h2 {
+    font-size: 1.5em; /* Taille de la police pour le sous-titre */
+    margin-top: 10px; /* Espace au-dessus du sous-titre */
+}
+
+.cards-section {
+    display: flex; /* Disposition en ligne des cartes */
+    justify-content: space-around; /* Espacement égal entre les cartes */
+    flex-wrap: wrap; /* Permet aux cartes de s'enrouler si nécessaire */
+    padding: 40px 20px; /* Espacement autour des cartes */
+    background-color: transparent; /* Transparent pour laisser apparaître l'image de fond */
+    position: relative; /* Pour superposition */
+    z-index: 10; /* Au-dessus de l'image de fond */
+
+}
+
+.card {
+    background-color: white; /* Couleur de fond des cartes */
+    border-radius: 15px; /* Coins arrondis */
+    padding: 20px; /* Espacement interne des cartes */
+    width: 250px; /* Largeur fixe des cartes */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre autour des cartes */
+    text-align: center; /* Texte centré */
+    margin-bottom: 20px; /* Espacement en bas de chaque carte */
+}
+
+.card h3 {
+    font-size: 1.2em; /* Taille de la police des titres des cartes */
+    margin-bottom: 10px; /* Espace en dessous du titre */
+}
+
+.card p {
+    font-size: 1em; /* Taille de la police du texte des cartes */
+    margin-bottom: 15px; /* Espace en dessous du texte */
+}
+
+.buy-button-container {
+    text-align: center; /* Centrer le bouton */
+    margin-top: 20px; /* Espacement au-dessus du bouton */
+    padding-bottom: 40px; /* Espacement en dessous du bouton */
+    height: 65vh; /* Hauteur égale à la hauteur de la fenêtre */
+}
+
+.buy-button {
+    background-color: #1E5B41; /* Couleur de fond du bouton */
+    color: white; /* Couleur du texte du bouton */
+    border: none; /* Pas de bordure */
+    border-radius: 5px; /* Coins arrondis du bouton */
+    padding: 15px 30px; /* Espacement interne du bouton */
+    font-size: 1.1em; /* Taille de la police du bouton */
+    cursor: pointer; /* Curseur pointeur */
+    transition: background-color 0.3s; /* Transition douce pour le changement de couleur */
+}
+
+.buy-button:hover {
+    background-color: #C13F24; /* Couleur de fond du bouton au survol */
+}
+
+/* Style de l'icône de flèche */
+.scroll-down {
+    position: absolute; /* Positionnement absolu pour le placer en bas du header */
+    bottom: 20px; /* Espace en bas du header */
+    left: 50%; /* Centrer horizontalement */
+    transform: translateX(-50%); /* Ajustement de centrage */
+    font-size: 2em; /* Taille de l'icône */
+    color: white; /* Couleur de l'icône */
+    cursor: pointer; /* Curseur pointeur pour indiquer un élément cliquable */
+    animation: bounce 2s infinite; /* Animation de rebond */
+}
+
+/* Animation de rebond pour la flèche */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateX(-50%) translateY(0); /* Position de départ */
+    }
+    40% {
+        transform: translateX(-50%) translateY(-10px); /* Monte */
+    }
+    60% {
+        transform: translateX(-50%) translateY(-5px); /* Descend légèrement */
+    }
+    body {
+        background: #f1f1f1;
+        font-family: Arial, Helvetica, sans-serif;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+      
+      h1 {
+        font-size: 10vw;
+        text-align: center;
+        margin-top: 20px;
+        color: #333;
+      }
+      
+      .contenu {
+        /* grow shrink basis */
+        flex: 1 0 auto;
+      }
+      
+      .contenu p {
+        padding: 5vw 10vw;
+        text-align: justify;
+      }
+      #logo {
+        width: 150px; /* Ajustez la taille selon vos besoins */
+        height: auto; /* Maintient les proportions */
+      }
+     
+}
